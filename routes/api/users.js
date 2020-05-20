@@ -35,7 +35,9 @@ router.post(
 			});
 
 			if (user) {
-				res.status(400).json({ errors: [{ msg: 'User already exists' }] });
+				return res
+					.status(400)
+					.json({ errors: [{ msg: 'User already exists' }] });
 			}
 
 			// Get Gravatar

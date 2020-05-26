@@ -8,7 +8,7 @@ const jwt = require('jsonwebtoken');
 
 const router = express.Router();
 // @route  GET api/auth
-// @desc   Test route
+// @desc   Return user
 // @access Public
 router.get('/', auth, async (req, res) => {
 	try {

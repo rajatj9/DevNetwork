@@ -19,7 +19,7 @@ const initialState = {
 	instagram: '',
 };
 
-const CreateProfile = ({
+const EditProfile = ({
 	profile: { profile, loading },
 	createProfile,
 	getCurrentProfile,
@@ -70,7 +70,7 @@ const CreateProfile = ({
 
 	return (
 		<Fragment>
-			<h1 className='large text-primary'>Create Your Profile</h1>
+			<h1 className='large text-primary'>Edit Your Profile</h1>
 			<p className='lead'>
 				<i className='fas fa-user' /> Add some changes to your profile
 			</p>
@@ -241,7 +241,7 @@ const CreateProfile = ({
 	);
 };
 
-CreateProfile.propTypes = {
+EditProfile.propTypes = {
 	createProfile: PropTypes.func.isRequired,
 	getCurrentProfile: PropTypes.func.isRequired,
 	profile: PropTypes.object.isRequired,
@@ -254,4 +254,4 @@ const mapStateToProps = state => ({
 export default connect(
 	mapStateToProps,
 	{ createProfile, getCurrentProfile },
-)(withRouter(CreateProfile));
+)(withRouter(EditProfile));

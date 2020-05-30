@@ -4,6 +4,8 @@ import {
 	CLEAR_PROFILE,
 	UPDATE_PROFILE,
 	GET_REPOS,
+	NO_REPOS,
+	GET_ALL_PROFILES,
 } from '../actions/types';
 const initState = {
 	profile: null,
@@ -23,6 +25,12 @@ export default function(state = initState, action) {
 				...state,
 				loading: false,
 				profile: payload,
+			};
+		case GET_ALL_PROFILES:
+			return {
+				...state,
+				profiles: payload,
+				loading: false,
 			};
 		case PROFILE_ERROR:
 			return {

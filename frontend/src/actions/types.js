@@ -14,3 +14,4 @@ export const UPDATE_PROFILE = 'UPDATE_PROFILE';
 export const ACCOUNT_DELETED = 'ACCOUNT_DELETED';
 export const GET_REPOS = 'GET_REPOS';
 export const NO_REPOS = 'NO_REPOS';
+export const GET_ALL_PROFILES = 'GET_ALL_PROFILES';

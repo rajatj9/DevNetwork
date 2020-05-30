@@ -19,11 +19,10 @@ A platform for developers where they can share their resume and interact with ot
 * React
 * Redux
 * Axios
-* react-
+* react-router
 
 ### Database
 * MongoDB Atlas
-
 
 ## Installation
 

@@ -18,4 +18,5 @@ const DashboardActions = () => {
 		</Fragment>
 	);
 };
+
 export default DashboardActions;

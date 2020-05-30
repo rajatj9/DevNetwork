@@ -7,11 +7,13 @@ import Spinner from '../layout/Spinner';
 import DashboardActions from './DashboardActions';
 import Experience from './Experience';
 import Education from './Education';
+import { deleteAccount } from '../../actions/profile';
 
 const Dashboard = ({
 	getCurrentProfile,
 	auth: { user },
 	profile: { profile, loading },
+	deleteAccount,
 }) => {
 	useEffect(() => {
 		getCurrentProfile();
@@ -31,6 +33,11 @@ const Dashboard = ({
 					<DashboardActions />
 					<Experience experience={profile.experience} />
 					<Education education={profile.education} />
+					<div className='my-2'>
+						<button className='btn btn-danger' onClick={() => deleteAccount()}>
+							<i className='fas fa-user-minus' /> Delete My Account
+						</button>
+					</div>
 				</Fragment>
 			) : (
 				<Fragment>
@@ -38,6 +45,10 @@ const Dashboard = ({
 					<Link to='/create-profile' className='btn btn-primary my-1'>
 						Create Profile
 					</Link>
+
+					<button className='btn btn-danger' onClick={() => deleteAccount()}>
+						<i className='fas fa-user-minus' /> Delete My Account
+					</button>
 				</Fragment>
 			)}
 		</Fragment>
@@ -48,6 +59,7 @@ Dashboard.propTypes = {
 	getCurrentProfile: PropTypes.func.isRequired,
 	auth: PropTypes.object.isRequired,
 	profile: PropTypes.object.isRequired,
+	deleteAccount: PropTypes.func.isRequired,
 };
 
 const mapStateToProps = state => ({
@@ -57,5 +69,5 @@ const mapStateToProps = state => ({
 
 export default connect(
 	mapStateToProps,
-	{ getCurrentProfile },
+	{ getCurrentProfile, deleteAccount },
 )(Dashboard);

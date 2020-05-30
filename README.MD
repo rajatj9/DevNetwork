@@ -2,7 +2,7 @@
 
 A platform for developers where they can share their resume and interact with other developers through posts and discussions.  
 
-Checkout the live demo <a herf="https://damp-reef-00489.herokuapp.com/"> here. </a>
+Checkout the live demo <a href="https://damp-reef-00489.herokuapp.com/"> here. </a>
 
 ## Features
 * Developers can add their skills, education, work experience and social media handles to their profile.

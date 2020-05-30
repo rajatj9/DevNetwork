@@ -5,6 +5,8 @@ import { Link } from 'react-router-dom';
 import { getCurrentProfile } from '../../actions/profile';
 import Spinner from '../layout/Spinner';
 import DashboardActions from './DashboardActions';
+import Experience from './Experience';
+import Education from './Education';
 
 const Dashboard = ({
 	getCurrentProfile,
@@ -20,11 +22,16 @@ const Dashboard = ({
 	) : (
 		<Fragment>
 			<h1 className='large text-primary'> Dashboard</h1>
-			<p classname='lead'>
-				<i className='fas fa-user'></i> Welcome {user && user.name}
+			<p classname='Lead'>
+				<i className='fas fa-user'></i> Welcome <b>{user && user.name} </b>
 			</p>
+			<br />
 			{profile !== null ? (
-				<DashboardActions />
+				<Fragment>
+					<DashboardActions />
+					<Experience experience={profile.experience} />
+					<Education education={profile.education} />
+				</Fragment>
 			) : (
 				<Fragment>
 					<p>You have not set up a profile yet, please add some information.</p>

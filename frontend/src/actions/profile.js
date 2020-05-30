@@ -77,7 +77,7 @@ export const addExperience = (formData, history) => async dispatch => {
 };
 
 // Add Experience
-export const addEducation = ({ formData, history }) => async dispatch => {
+export const addEducation = (formData, history) => async dispatch => {
 	try {
 		const config = {
 			headers: {
@@ -97,6 +97,40 @@ export const addEducation = ({ formData, history }) => async dispatch => {
 		if (errors) {
 			errors.forEach(error => dispatch(setAlert(error.msg, 'danger')));
 		}
+		dispatch({
+			type: PROFILE_ERROR,
+			payload: { msg: err.response.statusText, status: err.response.status },
+		});
+	}
+};
+
+// Delete education
+export const deleteEducation = eduID => async dispatch => {
+	try {
+		const res = await axios.delete(`/api/profile/education/${eduID}`);
+		dispatch({
+			type: UPDATE_PROFILE,
+			payload: res.data,
+		});
+		dispatch(setAlert('Education Removed', 'success'));
+	} catch (err) {
+		dispatch({
+			type: PROFILE_ERROR,
+			payload: { msg: err.response.statusText, status: err.response.status },
+		});
+	}
+};
+
+// Delete education
+export const deleteExperience = expID => async dispatch => {
+	try {
+		const res = await axios.delete(`/api/profile/experience/${expID}`);
+		dispatch({
+			type: UPDATE_PROFILE,
+			payload: res.data,
+		});
+		dispatch(setAlert('Experience Removed', 'success'));
+	} catch (err) {
 		dispatch({
 			type: PROFILE_ERROR,
 			payload: { msg: err.response.statusText, status: err.response.status },

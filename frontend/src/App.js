@@ -55,7 +55,7 @@ const App = () => {
 							/>
 							<PrivateRoute
 								exact
-								path='./add-education'
+								path='/add-education'
 								component={AddEducation}
 							/>
 						</Switch>

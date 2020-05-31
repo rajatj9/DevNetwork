@@ -12,9 +12,9 @@ Checkout the live demo <a href="https://damp-reef-00489.herokuapp.com/"> here. <
 * Developers can share posts and view posts by other developers and also like/comment.
 
 <p float="left">
-  <img src="assets/posts.png" width="200" />
-  <img src="assets/developers.png" width="200" /> 
-  <img src="assets/profile.png" width="200" />
+  <img src="assets/posts.png" width=30% />
+  <img src="assets/developers.png" width=30% /> 
+  <img src="assets/profile.png" width=30% />
 </p>
 
 ## Technologies Used

@@ -220,11 +220,11 @@ router.delete('/comment/:id/:comment_id', auth, async (req, res) => {
 	}
 });
 
-router.get('/find/:query', auth, async (req, res) => {
+router.get('/find/:query', async (req, res) => {
 	try {
 		const body = {
 			query: {
-				match: {
+				match_phrase_prefix: {
 					text: req.params.query,
 				},
 			},

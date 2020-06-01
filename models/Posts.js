@@ -1,5 +1,7 @@
 const mongoose = require('mongoose');
 
+const mongoosastic = require('mongoosastic');
+
 const PostSchema = new mongoose.Schema({
 	user: {
 		type: mongoose.Schema.Types.ObjectId,
@@ -52,4 +54,15 @@ const PostSchema = new mongoose.Schema({
 	},
 });
 
-module.exports = Post = mongoose.model('post', PostSchema);
+PostSchema.plugin(mongoosastic, {
+	host: 'localhost',
+	port: 9200,
+});
+
+const Post = mongoose.model('post', PostSchema);
+
+Post.createMapping((err, mapping) => {
+	console.log('mapping created');
+});
+
+module.exports = Post;

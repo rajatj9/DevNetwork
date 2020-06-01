@@ -8,6 +8,12 @@ const NavBar = ({ auth: { isAuthenticated, loading }, logout }) => {
 	const authLinks = (
 		<ul>
 			<li>
+				<Link to='/search'>
+					<i class='fa fa-search' aria-hidden='true'></i>{' '}
+					<span class='hide-sm'>Search</span>
+				</Link>
+			</li>
+			<li>
 				<Link to='/posts'>
 					<i class='fa fa-comments' aria-hidden='true'></i>{' '}
 					<span className='hide-sm'>Posts</span>
@@ -73,10 +79,7 @@ NavBar.propTypes = {
 	logout: PropTypes.func.isRequired,
 	auth: PropTypes.object.isRequired,
 };
-const mapPropsToState = state => ({
+const mapPropsToState = (state) => ({
 	auth: state.auth,
 });
-export default connect(
-	mapPropsToState,
-	{ logout },
-)(NavBar);
+export default connect(mapPropsToState, { logout })(NavBar);

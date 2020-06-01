@@ -586,3 +586,14 @@ button {
 		padding: 0.3rem 0.4rem;
 	}
 }
+
+.App-search-box {
+	height: 60px;
+	width: 80%;
+	font-size: 2em;
+	margin: auto;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+}

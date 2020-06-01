@@ -3,7 +3,7 @@
 A platform for developers where they can share their resume and interact with
 other developers through posts and discussions.
 
-Checkout the live demo <a href="https://damp-reef-00489.herokuapp.com/"> here.
+Checkout the live demo <a href="https://damp-reef-00489.herokuapp.com/"> here (without search).
 </a>
 
 <img src="assets/main.png">
@@ -19,11 +19,11 @@ Checkout the live demo <a href="https://damp-reef-00489.herokuapp.com/"> here.
   like/comment.
 
 <p float="left">
-  <img src="assets/es.png" width=300>
+  <img src="assets/es.png" width=400>
 
-  <img src="assets/developers.png" width=300 /> 
-  <img src="assets/profile.png" width=300/>
-  <img src="assets/posts.png" width=300/>
+  <img src="assets/developers.png" width=400 /> 
+  <img src="assets/profile.png" width=400/>
+  <img src="assets/posts.png" width=400/>
 </p>
 
 ## Technologies Used

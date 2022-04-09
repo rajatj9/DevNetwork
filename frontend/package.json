@@ -8,7 +8,7 @@
 		"@testing-library/user-event": "^7.1.2",
 		"axios": "^0.21.1",
 		"font-awesome": "^4.7.0",
-		"moment": "^2.26.0",
+		"moment": "^2.29.2",
 		"react": "^16.13.1",
 		"react-dom": "^16.13.1",
 		"react-fontawesome": "^1.7.1",
